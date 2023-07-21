@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+svg,
+img {
+  max-width: 100%;
+  fill: gray;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+a {
+  font: inherit;
+  color: inherit;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: black;
+  padding: 1em;
+}
+
+h1,
+h2,
+p {
+  color: white;
+}
+
+table {
+  color: white;
+}
+
+button {
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgb(170, 255, 1);
+  box-shadow: 0em 0.3em 0em rgba(170, 255, 1, 0.4);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+button:disabled {
+  background-color: rgba(170, 255, 1, 0.5);
+}
+
+button:not(:disabled):hover,
+button:not(:disabled):focus {
+  box-shadow: none;
+  transform: translateY(0.2em);
+}
+
+.wrapper {
+  place-items: start;
+}
+
+.view-navigation {
+  gap: 1em;
+  margin-bottom: 3em;
+}
+
+form {
+  grid-template-columns: repeat(4, auto);
+  gap: 0.5em;
+  align-items: center;
+  margin-bottom: 5em;
+}
+form input[type=text] {
+  grid-column: span 2;
+  border-radius: 5px;
+  border: 0;
+  padding: 0.5em 1em;
+}
+form input[type=color] {
+  border-radius: 5px;
+  cursor: pointer;
+}
+form .generate-cars-btn {
+  grid-column: span 2;
+}
+
+.garage {
+  row-gap: 1em;
+  width: 100%;
+}
+.garage h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.garage .cars-container {
+  gap: 1em;
+}
+.garage .cars-container .car-container {
+  row-gap: 0.8em;
+  border-bottom: 1px dashed white;
+}
+.garage .cars-container .car-container .controls {
+  gap: 0.5em;
+  align-items: center;
+}
+.garage .cars-container .car-container .controls .model-name {
+  margin-left: 1em;
+}
+.garage .cars-container .car-container .racetrack {
+  position: relative;
+  gap: 0.5em;
+}
+.garage .cars-container .car-container .racetrack button {
+  margin-bottom: 1em;
+}
+.garage .cars-container .car-container svg {
+  position: absolute;
+  width: 5em;
+  align-self: end;
+  left: 12em;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.garage .cars-container .car-container i {
+  align-self: end;
+  font-size: 2em;
+  margin-left: auto;
+  margin-right: 3em;
+}
+
+.winner-text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5rem;
+  color: gold;
+  text-shadow: 0 0 1em;
+}
+
+.car {
+  transform: rotateY(180deg);
+}
+
+.pages-navigation {
+  margin-top: 2em;
+  gap: 0.5em;
+}
+
+@keyframes car-animation {
+  100% {
+    left: calc(100% - 5em);
+  }
+}
+.winners {
+  row-gap: 1em;
+}
+.winners h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.winners th i {
+  margin-left: 0.5em;
+}
+.winners table,
+.winners th,
+.winners td {
+  border: 1px solid;
+  border-collapse: collapse;
+}
+.winners table th,
+.winners th th,
+.winners td th {
+  background-color: rgb(170, 255, 1);
+  color: black;
+}
+.winners table td,
+.winners table th,
+.winners th td,
+.winners th th,
+.winners td td,
+.winners td th {
+  padding: 0.5em 1em;
+  text-align: center;
+}
+.winners table .car,
+.winners th .car,
+.winners td .car {
+  height: 1.2rem;
+  width: auto;
+}/*# sourceMappingURL=index.css.map */
